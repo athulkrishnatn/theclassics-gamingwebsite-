@@ -1,0 +1,9 @@
+/* styles.css */
+#image-gallery {
+    max-height: 0;
+    overflow: hidden;
+}
+
+#image-gallery.show {
+    max-height: 500px; /* Adjust the height as needed to fit the content */
+}

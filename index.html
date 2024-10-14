@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheClassics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class=" bg-black text-white">
+    <div id="" class="navbar flex justify-between text-center font-light text-[10px]  ">
+        <div class="logo cursor-pointer">
+            <h1 class="pl-9 font-light cursor-pointer text-[18px]" >The <span class="font-extrabold text-red-600" style=" background-color: black; color: rgb(219, 31, 31); border-radius: 3px;  ">Classics</span> </h1>
+        </div>
+        <div class="na">
+            <ul class="flex mx-2 pr-[0px] text-[15px] font-light">
+                <li class="relative mx-2">
+                    <a
+                        onclick="toggleSlideDown()"
+                        class="hover:text-white hover:font-normal before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[2px] before:bg-transparent before:content-[''] hover:before:bg-white before:transition-colors before:duration-300 cursor-pointer"
+                        href="javascript:void(0);"
+                    >
+                        Discover
+                    </a>
+                
+                    <!-- Slide-down image series -->
+                    <div
+                        id="imageSlide"
+                        class="slide  absolute bg-white shadow-lg mt-2 overflow-hidden transition-all duration-500 ease-in-out max-h-0 flex"
+                    >
+                        <img src="./assets/dropdown/14312e604f0637a2afd376dd571345d9.jpg" alt="Image 1" class="w-40 h-20 m-2">
+                        <img src="./assets/dropdown/ccac790d960f612fa0746c78b8052926.jpg" alt="Image 2" class="w-20 h-20 m-2">
+                        <img src="./assets/dropdown/5dc0952c9e5beba577aeffe0289478bd.jpg" alt="Image 3" class="w-20 h-20 m-2">
+                        <img src="./assets/dropdown/5239707dea0f2f4ea8351f64e6b5a921.jpg" alt="Image 4" class="w-20 h-20 m-2">
+                        <img src="./assets/dropdown/214a1cd1a2e7bb8f9b1e5d3846ca2993.jpg" alt="Image 5" class="w-20 h-20 m-2">
+                    </div>
+                </li>
+                
+                <script>
+                    function toggleSlideDown() {
+                        const imageSlide = document.getElementById('imageSlide');
+                        if (imageSlide.classList.contains('hidden')) {
+                            imageSlide.classList.remove('hidden');
+                            imageSlide.style.maxHeight = imageSlide.scrollHeight + 'px';
+                        } else {
+                            imageSlide.classList.add('hidden');
+                            imageSlide.style.maxHeight = '0';
+                        }
+                    }
+                </script>
+                
+                
+
+            
+
+                <li class="relative mx-3">
+                  <a
+                    class="hover:text-white hover:font-normal before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[2px] before:bg-transparent before:content-[''] hover:before:bg-white before:transition-colors before:duration-300"
+                    href="#"
+                  >
+                    Browse
+                  </a>
+                </li>
+                <li class="relative mx-3">
+                  <a
+                    class="hover:text-white hover:font-normal before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[2px] before:bg-transparent before:content-[''] hover:before:bg-white before:transition-colors before:duration-300"
+                    href="#"
+                  >
+                    News
+                  </a>
+                </li>
+                <li class="relative mx-3">
+                  <a
+                    class="hover:text-white hover:font-normal before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[2px] before:bg-transparent before:content-[''] hover:before:bg-white before:transition-colors before:duration-300"
+                    href="#"
+                  >
+                    Wishlist
+                  </a>
+                </li>
+                <li class="relative mx-2">
+                  <a
+                    class="hover:text-white hover:font-normal before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[2px] before:bg-transparent before:content-[''] hover:before:bg-white before:transition-colors before:duration-300"
+                    href="#"
+                  >
+                    Cart
+                  </a>
+                </li>
+              </ul>
+              
+            
+        </div>
+        <div class="relative">
+            <!-- Clickable Icon -->
+            <i id="dropdownIcon" class="fa-solid fa-user-plus fa-lg text-white cursor-pointer pr-4"></i>
+    
+            <!-- Dropdown Menu -->
+            <div id="dropdownMenu" class="absolute right-0  w-48 bg-gray-900 mt-3 me-2 rounded-lg shadow-lg hidden text-white font-medium">
+                <ul class="py-2">
+                    <li class="px-4 py-2 hover:text-black hover:bg-gray-100 cursor-pointer">Profile</li>
+                    <li class="px-4 py-2 hover:text-black hover:bg-gray-100 cursor-pointer">Settings</li>
+                    <li class="px-4 py-2 hover:text-black hover:bg-gray-100 cursor-pointer">Logout</li>
+                </ul>
+            </div>
+        </div>
+  
+
+    </div>
+    <hr>
+    
+
+
+
+    <!--Section 1-->
+    <div class="sec1 grid grid-cols-10 pt-6 bg-fixed ">
+        <div class="col-span-7 pl-[20px] ">
+            <img src="./assets/en-us.jpg" alt="">
+        </div>
+        <div class="col-span-3 pl-[30px] mt-[100px] ">
+            <h1 class="text-[13px] font-semibold">Red Dead Redemption   <span class="text-[13px] text-gray-500">    October 10, 2024</span> </h1>
+            <br>
+            <h4 class="text-[30px] font-bold">Pre Purchase Red Dead Redemption and Undead Nightmare on PC at GameWave store</h4>
+            <h2 class="text-[22px] font-bold py-[15px]">Trailer 1</h2>
+            <button class= "hover:bg-red-700 bg-orange-600 text-white font-semibold w-[150px] h-[30px] rounded">Watch Now</button>
+        </div>
+    </div>
+    <br>
+
+    <!--Section 2-->
+    <div class="sec2 grid grid-cols-3 grid-rows-2 gap-4 border-gray-700  ">
+        <div class=" p-4 "><img class=" transform transition-transform duration-700 hover:scale-105" src="./assets/9im/1.jpg" alt="">
+            <div class="pt-2">
+                <h1 class="text-[15px] font-semibold pt-1">Max Payne 3    <span class="text-[13px] text-gray-500">    October 10, 2024</span>
+                    <p class="text-[25px]">Purchase Max Payne at GameWave Store.</p>
+            </div>
+        </div>
+        <div class=" p-4">
+            <img class=" transform transition-transform duration-700 hover:scale-105" src="./assets/9im/6.jpg" alt="">
+            <div>
+                <h1 class="text-[15px] font-semibold pt-4">L.A Noire   <span class="text-[13px] text-gray-500">    December 10, 2011</span>
+                    <p class="text-[25px]"> Neo-noir detective action-adventure.</p>
+            </div>
+        
+        </div>
+        <div class=" p-4"><img class=" transform transition-transform duration-700 hover:scale-105" src="./assets/9im/3.jpg" alt="">
+            <div class="pl-4">
+                <h1 class="text-[15px] font-semibold pt-2">Grand Theft Auto Vice City  <span class="text-[13px] text-gray-500">    December 10, 2002</span>
+                    <p class="text-[25px]">Vice City: 80s crime and neon.
+                        Explore Miami Heat, Underworld Unleashed.
+                    </p>
+            </div>
+        </div>
+        <div class=" p-4"><img class=" transform transition-transform duration-700 hover:scale-105" src="./assets/9im/5.jpg" alt="">
+            <div class="">
+                <h1 class="text-[15px] font-semibold pt-2">Thrasher  <span class="text-[13px] text-gray-500">    May 5, 1999</span>
+                    <p class="text-[25px]"> Realism over arcade-style gameplay.
+                    </p>
+            </div>
+        </div>
+        <div class=" p-4"><img class=" transform transition-transform duration-700 hover:scale-105" src="./assets/9im/4.jpg" alt="">
+            <div class="">
+                <h1 class="text-[15px] font-semibold pt-2">R.D.R Part Two  <span class="text-[13px] text-gray-500">   October 2018</span>
+                    <p class="text-[25px]"> Outlaw's journey in a changing America.
+                    </p>
+            </div></div>
+        <div class=" p-4"><img class=" transform transition-transform duration-700 hover:scale-105" src="./assets/9im/2.jpg" alt="">
+            <div class="">
+                <h1 class="text-[15px] font-semibold pt-2">R.D.R Revolver  <span class="text-[13px] text-gray-500">    July 5, 2005</span>
+                    <p class="text-[25px]"> Outlaw vengeance in the Wild West.
+                    </p>
+            </div>
+        </div>
+
+    </div>
+    <hr><br>
+
+
+    <!--section 3-->
+    <p class="text-[25px] font-bold pl-[25px]">Featured Games</p><br>
+
+    <div class="mx-auto gap-5 flex">
+        
+        <div class="image-container justify-center pl-[2%]">
+          <!---->  <img class="w-auto  h-auto rounded " src="./assets/global.jpg" alt="">
+        </div>
+        <div>
+            <br>
+            <br>
+            <p class="text-[25px] font-semibold text-white">Grand Theft Auto V" (GTA 5) by Rockstar Games is an action-adventure game set in the fictional state of San Andreas.
+                <br>
+                <br>
+               <span class="font-thin text-white pt-[20px]"> For more details, you can visit the official Rockstar <br>Games website <a class="underline" href="https://www.rockstargames.com/">here.</a></span>
+            </p>
+        </div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+    
+    <div class="sec3 text-center">
+        <p class="px-8 text-white relative inline-block rounded  font-light  hover:underline text-[25px]">
+            Rediscover <span class="font-medium">the</span> <span class="text-red-600 font-semibold ">classics</span> and elevate your gaming skills.
+           
+        </p>
+
+    </div>
+    <br>
+    
+    <div id="carouselExampleRide" class="carousel slide items-center justify-center" data-bs-ride="true">
+        <div class="carousel-inner items-center justify-center mx-auto">
+            <div class="carousel-item active items-center justify-center">
+                <img src="./assets/carousel/342dde97d3e4872324a798963a86182d522f53fc.jpg" class="d-block w-[50%] mx-auto" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/carousel/a6bdebd16bec583cbadbe4332568a742defeeecf.jpg" class="d-block w-[50%] mx-auto" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/da338e9eee9cb059ffd2c93fa950e046bddb84fa.jpg" class="d-block w-[50%] mx-auto" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <br>
+    <br><br><hr><br><br><br><br>
+
+    <!--footer-->
+    <div class="footer" ">
+        <div class="text-center">
+            <p><em>the<span class="text-red-600 font-semibold">Classics</span></em>.com</p>
+            <p class="pt-4 text-[20px] font-bold">Subscribe to theClassics Games Email List</p>
+            
+            <p class="text-center pt-3 text-[13px]">Sign up for our email newsletter to get info on game announcements <br>and updates, details on special events and offers, <br> and more from Rockstar Games and our affiliates.</p>
+            <button onclick="window.location.href='signin.html'" class="bg-red-600 rounded w-[200px] h-[40px] mt-4 hover:bg-red-800 ">Sign Up Now!</button>
+        </div>
+    </div>
+    <br><br><br><hr><br>
+
+    <footer style="background-color: #000000; padding: 40px; color: #ffffff; display: flex; flex-wrap: wrap; justify-content: space-between; font-family: Arial, sans-serif;">
+        <div style="flex: 1; min-width: 250px; margin: 20px;">
+            <h3 style="font-size: 24px; margin-bottom: 10px;">The Classics</h3>
+            <p style="margin: 0; font-size: 14px;">Where gaming legends come to life.</p>
+        </div>
+    
+        <div style="flex: 1; min-width: 250px; margin: 20px;">
+            <h4 class="font-semibold" style="font-size: 20px;">Quick Links</h4><br>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="#home" style="color: #ffffff; text-decoration: none;">Home</a></li>
+                <li><a href="#about" style="color: #ffffff; text-decoration: none;">About Us</a></li>
+                <li><a href="#games" style="color: #fff; text-decoration: none;">Games</a></li>
+                <li><a href="#contact" style="color: #fff; text-decoration: none;">Contact</a></li>
+            </ul>
+        </div>
+    
+        <div style="flex: 1; min-width: 250px; margin: 20px;">
+            <h4 class="font-semibold" style="font-size: 20px;">Follow Us</h4><br>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="#" style="color: #007bff; text-decoration: none;">Facebook</a></li>
+                <li><a href="#" style="color: #007bff; text-decoration: none;">Twitter</a></li>
+                <li><a href="#" style="color: #007bff; text-decoration: none;">Instagram</a></li>
+                <li><a href="#" style="color: #007bff; text-decoration: none;">LinkedIn</a></li>
+            </ul>
+        </div>
+    
+        <div style="flex: 1; min-width: 250px; margin: 20px;">
+            <h4 class="font-semibold" style="font-size: 20px;">Contact Us</h4><br>
+            <p style="margin: 0; font-size: 14px;">Email: info@theclassics.com</p>
+            <p style="margin: 0; font-size: 14px;">Phone: (123) 456-7890</p>
+        </div>
+    
+        <div style="flex-basis: 100%; text-align: center; border-top: 1px solid #444; padding-top: 20px; margin-top: 20px;">
+            <p style="margin: 0; font-size: 14px;">&copy; 2024 The Classics. All rights reserved.</p>
+            <p style="margin: 0; font-size: 12px;">This website is dedicated to preserving and celebrating classic games. Any reproduction or distribution of the content without permission is strictly prohibited.</p>
+        </div>
+    </footer>
+    
+
+ 
+    
+
+
+
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="./index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
